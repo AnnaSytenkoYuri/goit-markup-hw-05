@@ -163,8 +163,8 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
 } 
    
 .container-section-one {
@@ -442,4 +442,112 @@ li:hover p {
     line-height: 1.5;
     letter-spacing: 0.02em;
     max-width: 264px;
+}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 408px;
+    min-height: 584px;
+    border-radius: 4px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fcfcfc;
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 24px 72px 24px 24px;
+}
+.backdrop:not(.is-open) .modal {
+    transform: translate(-50%, -100%);
+}
+/* .modal {
+    margin-left: 0;
+    margin-right: 0;
+} */
+.modal-button {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 50%;
+    fill: #E7E9FC;
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.1);
+}
+.modal-button:hover {
+    background-color: #404BBF;
+    fill: #FFFFFF;
+    width: 24px;
+    height: 24px;
+    border: none;
+}
+
+.modal-title {
+    width: 360px;
+    padding-top: 72px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.15);
+}
+.modal-input {
+    border: 1px solid #2E3042;
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 38px;
+}
+.modal-input-container {
+    margin-bottom: 8px;
+}
+
+.modal-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+
+
+
+.modal-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 4px;
+    padding: 16px 32px;
+    width: 169px;
+    height: 56px;
+    color: #F4F4FD;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: #404BBF;
 }
