@@ -435,6 +435,10 @@ li:hover p {
 .logstudio-f {
     color: #f4f4fd;
 }
+
+.footer-form-container {
+    margin-left: 80px;
+}
 .footer-paragraf {
     color: rgba(244, 244, 253, 1);
     font-weight: 400;
@@ -538,10 +542,7 @@ li:hover p {
 .backdrop:not(.is-open) .modal {
     transform: translate(-50%, -100%);
 }
-/* .modal {
-    margin-left: 0;
-    margin-right: 0;
-} */
+
 .modal-close-button {
     position: absolute;
     border-radius: 50%;
@@ -573,14 +574,13 @@ li:hover p {
 
 .modal-title {
     width: 360px;
-    padding-top: 72px;
     margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
-    color: #2E2F42;
+    color: rgba(0, 0, 0, 0.15);
 }
 
 
@@ -615,6 +615,7 @@ li:hover p {
     position: absolute;
     left: 16px;
     top: 50%;
+    fill: rgba(0, 0, 0, 0.15);
     transform: translateY(-50%); 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -650,13 +651,11 @@ li:hover p {
     resize: none; 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.textarea-text {
-    border-color: #4D5AE5;
-}
+
 .textarea-text::placeholder {
     font-weight: 400;
     letter-spacing: 0.04em;
-    color:  #2E3042;
+    color: rgba(0, 0, 0, 0.15);
 }
 
 .check-box-container {
@@ -668,9 +667,12 @@ li:hover p {
     letter-spacing: 0.04em;
     color: #8e8f99;
 }
+
+
  .label-span {
     width: 16px;
     height: 16px;
+    margin-right: 8px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -679,17 +681,24 @@ li:hover p {
     justify-content: center; 
     fill: transparent;
  }
-.input-check-box:checked .span {
+
+ .input-check-box:checked + span {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
-}
-.label-link {
+ }
+
+.label-link { 
+    line-height: 1.33333;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
     color: #4d5ae5;
 }
 
 .modal-submit-btn {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     min-width: 169px;
     height: 56px;
     font-family: "Roboto", sans-serif;
