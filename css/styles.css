@@ -454,11 +454,7 @@ li:hover p {
 }
 
 .footer-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 16px;
+    gap: 24px;  
 }
 
 .footer-form-label {
