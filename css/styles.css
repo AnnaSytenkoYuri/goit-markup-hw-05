@@ -445,7 +445,6 @@ li:hover p {
 }
 .footer-subscribe-title {
     margin-bottom: 16px;
-    padding-right: 537px; 
     font-weight: 500;
     font-size: 16px; 
     line-height: 1.5;
@@ -454,6 +453,10 @@ li:hover p {
 }
 
 .footer-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     gap: 24px;  
 }
 
